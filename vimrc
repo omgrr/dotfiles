@@ -8,6 +8,11 @@ endif
 filetype off
 compiler ruby
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE)
+  set t_ut=
+endif
+
 " ========= Options ========
 set background=dark
 set foldlevel=99

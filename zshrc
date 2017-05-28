@@ -15,6 +15,8 @@ bindkey -e
 
 setopt prompt_subst
 
+export TERM=screen-256color
+
 # Environment diagnostic data
 export LOCALE="en_US.UTF-8"
 export LANG="en_US.UTF-8"

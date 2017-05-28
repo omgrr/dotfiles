@@ -58,7 +58,7 @@ fi
 
 # Change term to 256color if this is gnome terminal or xfce
 # Source: http://askubuntu.com/questions/233280/gnome-terminal-reports-term-to-be-xterm
-
+export TERM=xterm-256color
 if [ "$COLORTERM" = "gnome-terminal" ] || [ "$COLORTERM" = "xfce4-terminal" ]
 then
     export TERM=xterm-256color
@@ -142,5 +142,9 @@ safepathprepend $HOME/.bin
 safepathprepend $HOME/.bin.local
 
 # Common Tools
-safesource $HOME/.rvm/scripts/rvm
+# safesource $HOME/.rvm/scripts/rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+
+export NVM_DIR="/home/jerry/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
